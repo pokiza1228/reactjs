@@ -1,23 +1,16 @@
+import { Route, Routes } from "react-router-dom";
 import LinkMain from "./components/main-link/main-link";
+import About from "./screns/about/about";
+import Main from "./screns/main/main";
 function App() {
   return (
-    // <div className="App">
-    //   <header className="App-header">
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
+    <Routes>
+      <Route path="/" element={<Main /> }/>
+      <Route path="/about" element={<About /> }/>
+      {/* <Route path="/" /> */}
+    </Routes>
 
-    <LinkMain />
+   
   );
 }
 
