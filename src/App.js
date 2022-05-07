@@ -3,6 +3,7 @@ import LinkMain from "./components/main-link/main-link";
 import About from "./screns/about/about";
 import Feedback from "./screns/add-feedback/add-feedback";
 import Main from "./screns/main/main";
+import "./assets/css/main.scss"
 // import style from "./assets/css/main"
 function App() {
   return (

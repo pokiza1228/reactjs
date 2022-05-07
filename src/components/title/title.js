@@ -1,3 +1,4 @@
+import "./title.scss"
 const Title = ()=> {
     return (
         <div className="site-title">
