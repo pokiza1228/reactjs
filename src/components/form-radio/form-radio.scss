@@ -4,16 +4,4 @@
     border-radius: 10px;
     padding: 24px 50px 24px 24px;
 }
-.sort-by__label {
-    margin-right: 8px;
-    margin-bottom: 14px;
-    &:last-child {
-        margin-right: 0;
-    }
-}
-.sort-by__radio {
-    &:checked+ .sort-by__inner {
-         color: #FFFFFF;
-         background-color: #4661E6;
-    }
-}
+

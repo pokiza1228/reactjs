@@ -1,8 +1,11 @@
-const Radio = () => {
+import "./radio.scss"
+import Inner from "../inner/inner";
+const Radio = ({label,input ,span,...props}) => {
     return (
-        <label className="sort-by__label">
-            <input className="sort-by__radio visually-hidden" type={"radio"} name="sort"></input>
-            <Inner className="sort-by__inner">All</Inner>
+        <label className={label}>
+            <input className={input} {...props}></input>
+            <Inner className="sort-by__inner">{span}</Inner>
         </label>
     )
 }
+export default Radio;
