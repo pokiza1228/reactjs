@@ -7,6 +7,8 @@ const About = () => {
             About
         </h1>
         <Link to="/" >mainga borish</Link>
+        <br/>
+        <Link to="/add-feedback">add-feedback</Link>
         </>
         
     )

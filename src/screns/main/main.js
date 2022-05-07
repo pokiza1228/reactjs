@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom"
+
 const Main = () => {
     return (
         <>
-        <Link to="about"> About </Link> 
-        <Link to="add-feedback"> add-feedback</Link>
+        <h1>
+            Main
+        </h1>
+            <Link to="/about">About</Link><br/> 
+            <Link to="/add-feedback">add-feedback</Link>
         </>
     )
 }
