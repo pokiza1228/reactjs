@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import LinkMain from "../../components/main-link/main-link";
 
 const About = () => {
     return (
@@ -6,11 +7,10 @@ const About = () => {
         <h1>
             About
         </h1>
-        <Link to="/" >mainga borish</Link>
+        <LinkMain to="/" >mainga borish</LinkMain>
         <br/>
-        <Link to="/add-feedback">add-feedback</Link>
+        <LinkMain to="/add-feedback">add-feedback</LinkMain>
         </>
-        
     )
 }
 export default About;

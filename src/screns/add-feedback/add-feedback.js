@@ -1,14 +1,15 @@
 import { Link } from "react-router-dom"
+import LinkMain from "../../components/main-link/main-link";
 
 const Feedback = () => {
     return (
         <>
-        <Link to="/about">About</Link>
+        <LinkMain to="/about">About</LinkMain>
         <br/> 
          <h1>
             Add Feedback
         </h1>
-        <Link to="/"> Cancel </Link>
+        <LinkMain to="/"> Cancel </LinkMain>
         </>
        
     ) 

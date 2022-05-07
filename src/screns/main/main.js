@@ -1,13 +1,19 @@
 import { Link } from "react-router-dom"
-
+import FormRadio from "../../components/form-radio/form-radio";
+import Title from "../../components/title/title";
+import LinkMain from "../../components/main-link/main-link";
 const Main = () => {
     return (
         <>
         <h1>
             Main
         </h1>
-            <Link to="/about">About</Link><br/> 
-            <Link to="/add-feedback">add-feedback</Link>
+        <LinkMain to="/about">About</LinkMain>
+        <br/> 
+        <LinkMain to="/add-feedback">add-feedback</LinkMain>
+
+            <Title />
+            <FormRadio />
         </>
     )
 }
