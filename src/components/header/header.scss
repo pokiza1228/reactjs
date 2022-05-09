@@ -1,0 +1,27 @@
+.header {
+    width: 825px;
+    background-color: #373F68;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 24px;
+    padding-right: 16px;
+}
+.header__content {
+    display: flex;
+    align-items: center;
+}
+.header__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.25px;
+    color: #FFFFFF;
+    margin-left: 16px;
+}
+.header__link {
+    border: none;
+}
