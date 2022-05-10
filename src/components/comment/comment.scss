@@ -1,0 +1,13 @@
+.comment-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 28px 32px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+.comment-item__body {
+    width: 374px;
+    margin-left: 40px;
+}
