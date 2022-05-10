@@ -9,7 +9,7 @@ const CommentWrapper = () => {
             id={"99"}
             />
             <Comment 
-            span={"Enhancement"} 
+            span={"Feature"} 
             text={"Easier to search for solutions based on a specific stack."}
             h3={"Add tags for solutions"}
             id={"100"}

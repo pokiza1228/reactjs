@@ -1,11 +1,12 @@
 import "./comment.scss"
 import Inner from "../inner/inner"
+import "../../assets/imges/icon.svg"
 
 const Comment = ({span,text,h3,id,...props}) => {
     return (
         <li className="comment-item">
-            <div>
-                <img src=""/>
+            <div className="commeny-item__nomber">
+                <img src="../../assets/imges/icon.svg"/>
                 <span>{id}</span>
             </div>
             <div className="comment-item__body">
