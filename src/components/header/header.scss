@@ -1,5 +1,4 @@
 .header {
-    width: 825px;
     background-color: #373F68;
     border-radius: 10px;
     display: flex;
@@ -9,6 +8,8 @@
     padding-bottom: 14px;
     padding-left: 24px;
     padding-right: 16px;
+    width: 825px;
+    margin-bottom: 24px;
 }
 .header__content {
     display: flex;
@@ -24,4 +25,5 @@
 }
 .header__link {
     border: none;
+
 }

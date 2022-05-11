@@ -29,3 +29,17 @@
     flex-direction: column;
     justify-content: center;
 }
+.comment-item__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.25px;
+    color: #3A4374;
+    margin-bottom: 4px;
+}
+.comment-item__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    color: #647196;
+}

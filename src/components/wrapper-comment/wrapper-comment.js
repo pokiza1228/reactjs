@@ -14,6 +14,30 @@ const CommentWrapper = () => {
             h3={"Add tags for solutions"}
             id={"100"}
             />
+            <Comment 
+            span={"Enhancement"} 
+            text={"Easier to search for solutions based on a specific stack."}
+            h3={"Add tags for solutions"}
+            id={"99"}
+            />
+            <Comment 
+            span={"Enhancement"} 
+            text={"Easier to search for solutions based on a specific stack."}
+            h3={"Add tags for solutions"}
+            id={"99"}
+            />
+            <Comment 
+            span={"Enhancement"} 
+            text={"Easier to search for solutions based on a specific stack."}
+            h3={"Add tags for solutions"}
+            id={"99"}
+            />
+            <Comment 
+            span={"Enhancement"} 
+            text={"Easier to search for solutions based on a specific stack."}
+            h3={"Add tags for solutions"}
+            id={"99"}
+            />
         </ul>
     )
 }

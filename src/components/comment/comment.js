@@ -6,7 +6,7 @@ const Comment = ({span,text,h3,id,...props}) => {
     return (
         <li className="comment-item">
             <div className="commeny-item__nomber">
-                <img src="../../assets/imges/icon.svg"/>
+                <img src="../../assets/imges/icon.svg" />
                 <span>{id}</span>
             </div>
             <div className="comment-item__body">
