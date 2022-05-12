@@ -25,5 +25,16 @@
 }
 .header__link {
     border: none;
-
+}
+.header__sort {
+    background-color: transparent;
+    border: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #F2F4FE;
+    mix-blend-mode: normal;
+    opacity: 0.75;
+    display: block;
+    margin-left: 38px;
 }
