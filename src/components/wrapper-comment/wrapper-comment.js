@@ -3,7 +3,7 @@ import NotFeedbeck from "../not-feedback/not-fedbeck";
 
 
 const CommentWrapper = () => {
-    if (false) {
+    if (true) {
         return (
             <ul className="comment-wrapper">
                 <Comment 
