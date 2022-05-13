@@ -10,6 +10,7 @@ const CommentWrapper = () => {
       .then(data => setPosts(data))
       
     },[]);
+    
     return ( 
     <ul className="comment-wrapper"> 
       {
