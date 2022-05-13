@@ -1,54 +1,22 @@
+import { useEffect,useState} from "react";
 import Comment from "../comment/comment";
 import NotFeedbeck from "../not-feedback/not-fedbeck";
 
-
 const CommentWrapper = () => {
-    if (true) {
-        return (
-            <ul className="comment-wrapper">
-                <Comment 
-                span={"Enhancement"} 
-                text={"Easier to search for solutions based on a specific stack."}
-                h3={"Add tags for solutions"}
-                id={"99"}
-                />
-                <Comment 
-                span={"Feature"} 
-                text={"Easier to search for solutions based on a specific stack."}
-                h3={"Add tags for solutions"}
-                id={"100"}
-                />
-                <Comment 
-                span={"Enhancement"} 
-                text={"Easier to search for solutions based on a specific stack."}
-                h3={"Add tags for solutions"}
-                id={"99"}
-                />
-                <Comment 
-                span={"Enhancement"} 
-                text={"Easier to search for solutions based on a specific stack."}
-                h3={"Add tags for solutions"}
-                id={"99"}
-                />
-                <Comment 
-                span={"Enhancement"} 
-                text={"Easier to search for solutions based on a specific stack."}
-                h3={"Add tags for solutions"}
-                id={"99"}
-                />
-                <Comment 
-                span={"Enhancement"} 
-                text={"Easier to search for solutions based on a specific stack."}
-                h3={"Add tags for solutions"}
-                id={"99"}
-                />
-            </ul>
-        )
-    } else {
-        return (
-            <NotFeedbeck />
-        )
-    }
-    
+    const [ posts, setPosts ] = useState();
+    useEffect(()=>{
+        fetch('/data.json')
+      .then(response => response.json())
+      .then(data => setPosts(data))
+      
+    },[]);
+    return ( 
+    <ul className="comment-wrapper"> 
+      {
+      posts && posts.productRequests.map((post) => <Comment h3={post.title} span={post.category} text={post.description} id={post.upvotes}></Comment>)
+      }
+    </ul> 
+    )
+     // <NotFeedbeck />
 }
 export default CommentWrapper;
