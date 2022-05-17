@@ -1,19 +1,33 @@
 import { Route, Routes } from "react-router-dom";
 import LinkMain from "./components/main-link/main-link";
-import About from "./screns/about/about";
-import Feedback from "./screns/add-feedback/add-feedback";
+import Feedback from "./screns/feedback/feedback";
+import Add from "./screns/add-feedback/add-feedback";
 import Main from "./screns/main/main";
 import "./assets/css/main.scss"
-// import style from "./assets/css/main"
-function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<Main /> }/>
-      <Route path="/about" element={<About /> }/>
-      <Route path="/add-feedback" element={<Feedback />}/>
-    </Routes>
+import {createContext, useContext, useEffect, useState} from "react"
+export const ProductContext = createContext();
 
-   
+function App() {
+
+  const [ posts, setPosts ] = useState();
+  useEffect(()=>{
+      fetch('/data.json')
+    .then(response => response.json())
+    .then(data => setPosts(data))
+  },[]);
+
+  if (!posts) {
+    return null
+}
+
+  return (
+    <ProductContext.Provider value={{posts, setPosts}}>
+     <Routes>
+      <Route path="/" element={<Main /> }/>
+      <Route path={"/feedback/:id"} element={<Feedback/> }/>
+      <Route path="/add-feedback" element={<Add />}/>
+    </Routes>
+    </ProductContext.Provider>
   );
 }
 

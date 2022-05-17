@@ -2,6 +2,8 @@ import "./header.scss"
 import icon from "../../assets/imges/svet.svg"
 const { default: LinkMain } = require("../main-link/main-link")
 const Header = ({nomber, ...props}) => {
+    
+
     return (
         <header className="header">
             <div className="header__content">

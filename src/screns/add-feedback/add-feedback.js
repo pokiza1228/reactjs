@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom"
 import LinkMain from "../../components/main-link/main-link";
 
-const Feedback = () => {
+const Add = () => {
     return (
         <>
-        <LinkMain to="/about">About</LinkMain>
+        <LinkMain to="/feedback/:id">/feedback/</LinkMain>
         <br/> 
          <h1>
             Add Feedback
@@ -14,4 +14,4 @@ const Feedback = () => {
        
     ) 
 }
-export default Feedback;
+export default Add;
