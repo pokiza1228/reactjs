@@ -3,7 +3,7 @@ import Inner from "../inner/inner"
 import "../../assets/imges/icon.svg"
 import icon from "../../assets/imges/icon.svg"
 import { Link } from "react-router-dom"
-const Comment = ({span,text,h3,id,up,...props}) => {
+const Comment = ({span,text,h3,id,up,comment,...props}) => {
     return (
         <li className="comment-item" id={id}>
             <button className="commeny-item__nomber">
@@ -16,6 +16,9 @@ const Comment = ({span,text,h3,id,up,...props}) => {
                 </Link>
             <p className="comment-item__text">{text}</p>
             <Inner>{span}</Inner>
+            </div>
+            <div>
+                {comment}
             </div>
         </li>
     ) 

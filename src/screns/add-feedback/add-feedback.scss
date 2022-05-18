@@ -1,0 +1,40 @@
+.add {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    width: 540px;
+    padding: 52px 42px 40px;
+}
+.add__title {
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 35px;
+    letter-spacing: -0.333333px;
+    color: #3A4374;
+
+}
+.add__filed {
+    margin-bottom: 24px;
+}
+.add__filed-input {
+    height: 96px;
+}
+.add__filed--o {
+    margin-bottom: 32px;
+}
+.add__link {
+    display: flex;
+    justify-content: right;
+}
+.add__canel {
+    width: 93px;
+    background-color: #3A4374;
+    border: transparent;
+    display: block;
+   margin-right: 16px;
+}
+.add__add {
+    
+    display: block;
+    border: transparent;
+}

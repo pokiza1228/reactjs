@@ -7,7 +7,7 @@ import Header from "../../components/header/header";
 import CommentWrapper from "../../components/wrapper-comment/wrapper-comment";
 import Map from "../../components/map/map";
 import "./main.scss"
-// const {default: ProductContext} = require("../../App")
+//const {default: ProductContext} = require("../../App")
 import { ProductContext } from "../../App"
 
 const Main = () => {

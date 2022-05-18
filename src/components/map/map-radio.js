@@ -1,4 +1,6 @@
 import "./map-radio.scss"
+
+var a=2;
 const MapRadio = ({nomber,className, color,child,...props})=> {
     return (
         <label className="field-radio">
