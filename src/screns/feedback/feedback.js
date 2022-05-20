@@ -5,6 +5,7 @@ import LinkMain from "../../components/main-link/main-link";
 import Comment from "../../components/comment/comment";
 import FeeedbeckComment from "../../components/feedback-comment/feedback-comment";
 import "./feedback.scss"
+import Input from "../../components/input/input";
 
 
 
@@ -15,6 +16,8 @@ const Feedback = () => {
     
     const {id} =useParams();
     const obj = posts.productRequests.find(prop => prop.id==id)
+    const a=obj.comments ?  obj.comments.length : ""
+    console.log(a)
     return (
         <>
         <h1>
@@ -24,6 +27,7 @@ const Feedback = () => {
             <img></img>
             Go Back
         </Link>
+        <LinkMain to={"/edit/"+id} className="feedback__edit">Edit Feedback</LinkMain>
         {
         <Comment 
             h3={obj.title} 
@@ -31,12 +35,13 @@ const Feedback = () => {
             text={obj.description} 
             id={obj.id}
             up={obj.upvotes}
+            comment={a}
             key={obj.id}
         ></Comment>
         }
         <h2>
             {
-                obj.comments ?  obj.comments.length : ""
+                a
             } 
             {
                 obj.comments ? " Comments" : ""
@@ -57,8 +62,14 @@ const Feedback = () => {
             } */}
         </ul>
         <br/>
-        <LinkMain className="" >Post Comment</LinkMain>
-        <LinkMain to={"/edit/"+id} className="feedback__edit">Edit Feedback</LinkMain>
+        <form>
+            <Input 
+             h3={"Feedback Title"}
+             type={"text"}
+             
+            ></Input>
+            <LinkMain className="">Post Comment</LinkMain>
+        </form>
         </>
     )
 }

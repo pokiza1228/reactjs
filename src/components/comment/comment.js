@@ -3,6 +3,7 @@ import Inner from "../inner/inner"
 import "../../assets/imges/icon.svg"
 import icon from "../../assets/imges/icon.svg"
 import { Link } from "react-router-dom"
+import commentsv from "../../assets/imges/comment.svg"
 const Comment = ({span,text,h3,id,up,comment,...props}) => {
     return (
         <li className="comment-item" id={id}>
@@ -18,6 +19,7 @@ const Comment = ({span,text,h3,id,up,comment,...props}) => {
             <Inner>{span}</Inner>
             </div>
             <div>
+                <img src={commentsv}/>
                 {comment}
             </div>
         </li>

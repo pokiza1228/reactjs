@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import FormRadio from "../../components/form-radio/form-radio";
 import Title from "../../components/title/title";
 import LinkMain from "../../components/main-link/main-link";
@@ -14,7 +14,6 @@ const Main = () => {
     const {posts} = useContext(ProductContext);
     let array;
     array= posts && posts.productRequests.map((post) => post.id)
-    
     return (
         <div className="main container">
             <div className="main__title">
