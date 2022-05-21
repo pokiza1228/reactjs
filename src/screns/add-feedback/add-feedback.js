@@ -6,8 +6,7 @@ import { useContext, useRef, useState } from "react";
 import { ProductContext } from "../../App";
 const Add = () => {
 
-    const {posts}=useContext(ProductContext);
-    const [data, setData] =useState(posts.productRequests);
+    const {posts, setPosts:setData}=useContext(ProductContext);
     
     const [titleValue,setTitle]=useState();
     let FeedbackTitle = (evt)=> {setTitle(evt.target.value);}
@@ -19,24 +18,29 @@ const Add = () => {
     const [dValue,setD]=useState();
     let FeedbackD = (evt)=> {setD(evt.target.value);}
     
-    let NewArray = [
-        ...data,
-        {
-            "id": Math.floor(Math.random()*1000),
-            "title": titleValue,
-            "category":  caticoryValue,
-            "upvotes": 0,
-            "status": "planed",
-            "description": dValue,
-            "comments":[
-                ""
-            ]
-        }
-    ]
-    console.log(data)
+    let NewArray = {
+        ...posts,
+        productRequests: [
+            ...posts.productRequests,
+           ... [{
+                "id": Math.floor(Math.random()*1000),
+                "title": titleValue,
+                "category":  caticoryValue,
+                "upvotes": 0,
+                "status": "planed",
+                "description": dValue,
+                "comments":[
+                    
+                ]
+            }]
+        ]
+    }
     let Submit=(evt)=> {
         evt.preventDefault();
-        setData(NewArray)  
+        setData(NewArray) 
+    }
+    let reset=(evt)=>{
+         evt.target.reset();
     }
     return (
         <>
@@ -70,10 +74,9 @@ const Add = () => {
                 onInput={FeedbackD}
             />
             <div className="add__link">
-                <LinkMain className="add__canel"> Cancel </LinkMain>
+                <LinkMain className="add__canel" onClick={reset}> Cancel </LinkMain>
                 <LinkMain className="add__add" type="submit" onClick={Submit}> Add Feedback </LinkMain>
             </div>
-            
         </form>
         </>
     ) 

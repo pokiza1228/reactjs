@@ -6,12 +6,14 @@ import NotFeedbeck from "../not-feedback/not-fedbeck";
 const CommentWrapper = () => {
     const {posts}=useContext(ProductContext);
 
-    const [data, setData]=useState(posts);
-    let Func= ()=>{setData(posts)}
+    // const [data, setData]=useState(posts);
+    // let Func= ()=>{setData(posts)}
+
+    
     return ( 
     <ul className="comment-wrapper"> 
       {
-      data && data.productRequests.map((post) =>{ 
+      posts && posts.productRequests.map((post) =>{ 
       const a=  post.comments && post.comments.map((com)=> com.id).length
       return <Comment 
       h3={post.title} 
