@@ -14,7 +14,7 @@ const CommentWrapper = () => {
     <ul className="comment-wrapper"> 
       {
       posts && posts.productRequests.map((post) =>{ 
-      const a=  post.comments && post.comments.map((com)=> com.id).length
+      const a=  post.comments && post.comments.length
       return <Comment 
       h3={post.title} 
       span={post.category} 

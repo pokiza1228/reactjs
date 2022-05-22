@@ -7,6 +7,7 @@
     width: 255px;
     box-shadow: 0px 10px 40px -7px rgba(55, 63, 104, 0.350492);
     border-radius: 10px;
+    display: none;
 }
 .select__item {
     width: 100%; padding: 12px 24px;
@@ -14,11 +15,37 @@
     &:last-child{
         border: none;
     }
+    display: block;
+    &:hover {
+        cursor: pointer;
+        color: #AD1FEA;
+    }
 }
 .select__label {
-    display: block;
-   
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    color: #647196;
+    &:hover {
+        cursor: pointer;
+        color: #AD1FEA;
+    }
 }
-.select__text {
-    //display: block;
-}
+.select__option-tick {
+    margin-left: auto;
+    width: 11px;
+    height: 8px;
+    background: url("../../assets/imges/ptichka.svg") no-repeat center center;
+    background-size: auto;
+    display: none;
+  }
+
+  .select__filed:checked ~ .select__option-tick {
+      display: block;
+  }
+  .select--opened {
+      display: block;
+  }
+
