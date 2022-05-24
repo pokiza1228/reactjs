@@ -1,0 +1,65 @@
+.edit {
+    margin: 0 auto;
+    width: 540px;
+    padding: 54px 42px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+.edit__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 35px;
+    letter-spacing: -0.333333px;
+    color: #3A4374;
+    margin-bottom: 75px;
+}
+.edit__options {
+    width:456px;
+    padding: 13px 24px;
+    background-color: #F7F8FD;
+    border-radius: 5px;
+    text-align: left;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: #3A4374;
+    border: none;
+    margin-top: 16px;
+}
+.edit__label {
+    position: relative;
+    margin-bottom: 24px;
+    display: block;
+}
+.edit__label-tatile {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.194444px;
+    color: #3A4374;
+    margin-bottom: 2px;
+}
+.edit__label-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #647196;
+}
+.edit__delet {
+    background-color: #D73737;
+    width: 93px;
+    border: none;
+}
+.edit__canel {
+    background-color: #3A4374;
+    width: 93px;
+    border: none;
+}
+.edit__btn {
+    border: none;
+}
+.edit__btns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+}

@@ -4,16 +4,57 @@ import Input from "../../components/input/input";
 import "./add-feedback.scss"
 import { useContext, useRef, useState } from "react";
 import { ProductContext } from "../../App";
+import Select from "../../components/select/select";
+
+
+const options =[
+    {
+        
+        text:"Feature",
+        value:"1"
+    },
+    {
+        text:"UI",
+        value:"2"
+    },
+    {
+        text:"UX",
+        value:"3"
+    },
+    {
+        text:"Enhancement",
+        value:"4"
+    },
+    {
+        text:"Bug",
+        value:"5"
+    },
+    {
+        text:"All",
+        value:"6"
+    }
+]
 const Add = () => {
 
     const {posts, setPosts:setData}=useContext(ProductContext);
     
+    const  [isSortOpen,setSortOpen]=useState(false);
+    const [sortValue, setSortValue]=useState("1")
+
+    const hendalSortClick =(evt)=>{
+        evt.preventDefault();
+        setSortOpen(!isSortOpen)
+      }
+
+      const hendlChangeClose=(evt)=>{
+        evt.preventDefault();
+        const sortValue=evt.target.value
+        setSortOpen(false)
+        setSortValue(sortValue)
+      }
+
     const [titleValue,setTitle]=useState();
     let FeedbackTitle = (evt)=> {setTitle(evt.target.value);}
-    
-
-    const [caticoryValue,setCotigory]=useState();
-    let FeedbackCategory = (evt)=> {setCotigory(evt.target.value);}
 
     const [dValue,setD]=useState();
     let FeedbackD = (evt)=> {setD(evt.target.value);}
@@ -21,18 +62,18 @@ const Add = () => {
     let NewArray = {
         ...posts,
         productRequests: [
-            ...posts.productRequests,
            ... [{
                 "id": Math.floor(Math.random()*1000),
                 "title": titleValue,
-                "category":  caticoryValue,
+                "category":  options.find(option=>option.value===sortValue).text,
                 "upvotes": 0,
                 "status": "planed",
                 "description": dValue,
                 "comments":[
                     
                 ]
-            }]
+            }],
+            ...posts.productRequests
         ]
     }
     let Submit=(evt)=> {
@@ -42,6 +83,10 @@ const Add = () => {
     let reset=(evt)=>{
          evt.target.reset();
     }
+
+
+    
+
     return (
         <>
         <Link to={"/"}>Go Back</Link>
@@ -58,13 +103,19 @@ const Add = () => {
                 
                 onInput={FeedbackTitle}
             />
-            <Input
-                className1={"add__filed"}
-                text={"Choose a category for your feedback"}
-                h3={"Category"}
-                type={""}
-                onInput={FeedbackCategory}
-            />
+           <label className="edit__label">
+                <h2>Category</h2>
+                <p>Choose a category for your feedback</p>
+                <button onClick={hendalSortClick} className="edit__options" type="click">{
+                  options.find(option=>option.value===sortValue).text
+                }</button>
+                <Select className={"select--opened"}
+                options={options}
+                isOpen={isSortOpen}
+                defaultValue="1"
+                onChange={hendlChangeClose}
+                />  
+            </label>
             <Input
             className1={"add__filed add__filed--o"}
                 className2={"add__filed-input"}

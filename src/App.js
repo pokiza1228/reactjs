@@ -5,6 +5,7 @@ import Add from "./screns/add-feedback/add-feedback";
 import Main from "./screns/main/main";
 import "./assets/css/main.scss"
 import {createContext, useContext, useEffect, useState} from "react"
+import Edit from "./screns/edit-modal/edit-modal";
 export const ProductContext = createContext();
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
       <Route path="/" element={<Main /> }/>
       <Route path={"/feedback/:id"} element={<Feedback/> }/>
       <Route path="/add-feedback" element={<Add />}/>
+      <Route path="/edit/:id" element={<Edit/>}/>
     </Routes>
     </ProductContext.Provider>
   );
