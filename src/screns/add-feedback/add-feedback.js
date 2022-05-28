@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import LinkMain from "../../components/main-link/main-link";
 import Input from "../../components/input/input";
 import "./add-feedback.scss"
@@ -35,7 +35,7 @@ const options =[
     }
 ]
 const Add = () => {
-
+    const navigate=useNavigate();
     const {posts, setPosts:setData}=useContext(ProductContext);
     
     const  [isSortOpen,setSortOpen]=useState(false);
@@ -79,6 +79,7 @@ const Add = () => {
     let Submit=(evt)=> {
         evt.preventDefault();
         setData(NewArray) 
+        navigate("/");
     }
     let reset=(evt)=>{
          evt.target.reset();
